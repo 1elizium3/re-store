@@ -2336,37 +2336,37 @@ export const allBooksRemoveFromCart = (bookId) => {
 ......
 
 <!-- shopping-cart-table.js -->
-import React from 'react';
-import './shopping-cart-table.css'
-import { connect } from 'react-redux';
-import {                                                     <------
-  bookAddedToCart,                                        .......
-  bookRemoveFromCart,                                 
-  allBooksRemoveFromCart } from '../../actions/actions';      <------
+  import React from 'react';
+  import './shopping-cart-table.css'
+  import { connect } from 'react-redux';
+  import {                                                     <------
+    bookAddedToCart,                                        .......
+    bookRemoveFromCart,                                 
+    allBooksRemoveFromCart } from '../../actions/actions';      <------
 
-const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
-  const renderRow = (item, idx) => {
-    .............
-  }
+  const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
+    const renderRow = (item, idx) => {
+      .............
+    }
 
-  return (
-    <div className="shopping-cart-table">
-     ..............
-    </div>
-  );
-};
-
-const mapStateToProps = ({ cartItems, orderTotal }) => {
-  return {
-    items: cartItems,
-    total: orderTotal
+    return (
+      <div className="shopping-cart-table">
+       ..............
+      </div>
+    );
   };
-};
 
-const mapDispatchToProps = {                                <------
-  onIncrease: bookAddedToCart,
-  onDecrease: bookRemoveFromCart,                             .......
-  onDelete: allBooksRemoveFromCart
+  const mapStateToProps = ({ cartItems, orderTotal }) => {
+    return {
+      items: cartItems,
+      total: orderTotal
+    };
+  };
+
+  const mapDispatchToProps = {                                <------
+    onIncrease: bookAddedToCart,
+    onDecrease: bookRemoveFromCart,                             .......
+    onDelete: allBooksRemoveFromCart
 }                                                           <------
 
 
